@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20231003 03:29:19.769" rpa="false" schemaversion="3">
+<suite id="s1" name="Test-Vuetify-Alerts" source="D:\Newfolder\Z\รวม_Programmer\project-all\GitHub\robot-framework-vuetify-alerts\test-vuetify-alerts.robot">
+<test id="s1-t1" name="Test Case 1: Test the Usage section of v-alert - Verify" line="69">
+<kw name="Open Vuetifyjs">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231003 03:29:19.926" level="INFO">Opening browser 'Chrome' to base url 'https://v2.vuetifyjs.com/en/components/alerts/#usage'.</msg>
+<status status="PASS" starttime="20231003 03:29:19.926" endtime="20231003 03:29:24.823"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:19.926" endtime="20231003 03:29:24.823"/>
+</kw>
+<kw name="Click Element and Verify">
+<arg>${ELEMENT_SELECTION_DISMISSIBLE}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:24.824" endtime="20231003 03:29:24.852"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<var>${is_enabled}</var>
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<msg timestamp="20231003 03:29:24.884" level="INFO">${is_enabled} = None</msg>
+<status status="PASS" starttime="20231003 03:29:24.852" endtime="20231003 03:29:24.884"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:24.884" level="INFO">Clicking element 'css:.v-input--selection-controls__ripple'.</msg>
+<status status="PASS" starttime="20231003 03:29:24.884" endtime="20231003 03:29:24.940"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:24.824" endtime="20231003 03:29:24.940"/>
+</kw>
+<kw name="Click Button close and Verify of the Usage section">
+<arg>${ELEMENT_BUTTON_CLOSE}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is_button_close}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:24.941" endtime="20231003 03:29:24.968"/>
+</kw>
+<msg timestamp="20231003 03:29:24.968" level="INFO">${is_button_close} = True</msg>
+<status status="PASS" starttime="20231003 03:29:24.941" endtime="20231003 03:29:24.968"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${is_button_close}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:24.969" level="INFO">Clicking element '//*[@id="usage"]/div/div/div/div[1]/div[2]/div/div/button'.</msg>
+<status status="PASS" starttime="20231003 03:29:24.969" endtime="20231003 03:29:25.016"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:24.969" endtime="20231003 03:29:25.016"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENT_BUTTON_RESET}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.016" endtime="20231003 03:29:25.039"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_reset}</var>
+<arg>${ELEMENT_BUTTON_RESET}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.064" level="INFO">${text_reset} = RESET</msg>
+<status status="PASS" starttime="20231003 03:29:25.039" endtime="20231003 03:29:25.064"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${text_reset}</arg>
+<arg>RESET</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231003 03:29:25.064" endtime="20231003 03:29:25.064"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT_BUTTON_RESET}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.064" level="INFO">Clicking element '//*[@id="usage"]/div/div/div/div[1]/div[2]/button'.</msg>
+<status status="PASS" starttime="20231003 03:29:25.064" endtime="20231003 03:29:25.123"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENT_ALERT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.123" endtime="20231003 03:29:25.157"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_alert}</var>
+<arg>${ELEMENT_ALERT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.180" level="INFO">${text_alert} = I'm an Alert Usage Example</msg>
+<status status="PASS" starttime="20231003 03:29:25.157" endtime="20231003 03:29:25.180"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${text_alert}</arg>
+<arg>I'm an Alert Usage Example</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231003 03:29:25.180" endtime="20231003 03:29:25.180"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:24.941" endtime="20231003 03:29:25.180"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:19.925" endtime="20231003 03:29:25.180"/>
+</test>
+<test id="s1-t2" name="Test Case 2: Test v-slide-group and v-button of group" line="75">
+<kw name="Check Element and Text">
+<arg>${ELEMENT_BUTTON_DENSE}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.182" endtime="20231003 03:29:25.203"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_alert}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.219" level="INFO">${text_alert} = DENSE</msg>
+<status status="PASS" starttime="20231003 03:29:25.203" endtime="20231003 03:29:25.219"/>
+</kw>
+<kw name="Element Should Not Be Empty">
+<arg>${locator}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.237" level="INFO">${text} = DENSE</msg>
+<status status="PASS" starttime="20231003 03:29:25.219" endtime="20231003 03:29:25.237"/>
+</kw>
+<kw name="Should Not Be Equal" library="BuiltIn">
+<arg>${text}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" starttime="20231003 03:29:25.237" endtime="20231003 03:29:25.237"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.219" endtime="20231003 03:29:25.237"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${SPACE}</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20231003 03:29:25.252" level="INFO">Element '//*[@id="usage"]/div/div/div/div[1]/div[1]/div/div/div[2]/div/button[1]' does not contain text 'Set Variable '.</msg>
+<status status="PASS" starttime="20231003 03:29:25.237" endtime="20231003 03:29:25.252"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.182" endtime="20231003 03:29:25.253"/>
+</kw>
+<kw name="Check Element and Text">
+<arg>${ELEMENT_BUTTON_PROMINENT}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.253" endtime="20231003 03:29:25.274"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_alert}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.288" level="INFO">${text_alert} = PROMINENT</msg>
+<status status="PASS" starttime="20231003 03:29:25.274" endtime="20231003 03:29:25.288"/>
+</kw>
+<kw name="Element Should Not Be Empty">
+<arg>${locator}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.305" level="INFO">${text} = PROMINENT</msg>
+<status status="PASS" starttime="20231003 03:29:25.288" endtime="20231003 03:29:25.305"/>
+</kw>
+<kw name="Should Not Be Equal" library="BuiltIn">
+<arg>${text}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" starttime="20231003 03:29:25.305" endtime="20231003 03:29:25.305"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.288" endtime="20231003 03:29:25.306"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${SPACE}</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20231003 03:29:25.321" level="INFO">Element '//*[@id="usage"]/div/div/div/div[1]/div[1]/div/div/div[2]/div/button[2]' does not contain text 'Set Variable '.</msg>
+<status status="PASS" starttime="20231003 03:29:25.306" endtime="20231003 03:29:25.321"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.253" endtime="20231003 03:29:25.321"/>
+</kw>
+<kw name="Check Element and Text">
+<arg>${ELEMENT_BUTTON_OUTLINED}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.322" endtime="20231003 03:29:25.343"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_alert}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.355" level="INFO">${text_alert} = OUTLINED</msg>
+<status status="PASS" starttime="20231003 03:29:25.343" endtime="20231003 03:29:25.355"/>
+</kw>
+<kw name="Element Should Not Be Empty">
+<arg>${locator}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.370" level="INFO">${text} = OUTLINED</msg>
+<status status="PASS" starttime="20231003 03:29:25.355" endtime="20231003 03:29:25.370"/>
+</kw>
+<kw name="Should Not Be Equal" library="BuiltIn">
+<arg>${text}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" starttime="20231003 03:29:25.370" endtime="20231003 03:29:25.371"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.355" endtime="20231003 03:29:25.371"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${SPACE}</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20231003 03:29:25.387" level="INFO">Element '//*[@id="usage"]/div/div/div/div[1]/div[1]/div/div/div[2]/div/button[3]' does not contain text 'Set Variable '.</msg>
+<status status="PASS" starttime="20231003 03:29:25.371" endtime="20231003 03:29:25.387"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.322" endtime="20231003 03:29:25.388"/>
+</kw>
+<kw name="Check Element and Text">
+<arg>${ELEMENT_BUTTON_TEXT}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.388" endtime="20231003 03:29:25.407"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_alert}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.424" level="INFO">${text_alert} = TEXT</msg>
+<status status="PASS" starttime="20231003 03:29:25.407" endtime="20231003 03:29:25.424"/>
+</kw>
+<kw name="Element Should Not Be Empty">
+<arg>${locator}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.442" level="INFO">${text} = TEXT</msg>
+<status status="PASS" starttime="20231003 03:29:25.424" endtime="20231003 03:29:25.442"/>
+</kw>
+<kw name="Should Not Be Equal" library="BuiltIn">
+<arg>${text}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" starttime="20231003 03:29:25.442" endtime="20231003 03:29:25.443"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.424" endtime="20231003 03:29:25.443"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${SPACE}</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20231003 03:29:25.461" level="INFO">Element '//*[@id="usage"]/div/div/div/div[1]/div[1]/div/div/div[2]/div/button[4]' does not contain text 'Set Variable '.</msg>
+<status status="PASS" starttime="20231003 03:29:25.443" endtime="20231003 03:29:25.461"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.388" endtime="20231003 03:29:25.462"/>
+</kw>
+<kw name="Check Element and Text">
+<arg>${ELEMENT_BUTTON_SHAPED}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.463" endtime="20231003 03:29:25.491"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_alert}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.507" level="INFO">${text_alert} = SHAPED</msg>
+<status status="PASS" starttime="20231003 03:29:25.491" endtime="20231003 03:29:25.507"/>
+</kw>
+<kw name="Element Should Not Be Empty">
+<arg>${locator}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.527" level="INFO">${text} = SHAPED</msg>
+<status status="PASS" starttime="20231003 03:29:25.507" endtime="20231003 03:29:25.527"/>
+</kw>
+<kw name="Should Not Be Equal" library="BuiltIn">
+<arg>${text}</arg>
+<arg>${EMPTY}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" starttime="20231003 03:29:25.527" endtime="20231003 03:29:25.529"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.507" endtime="20231003 03:29:25.529"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${SPACE}</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20231003 03:29:25.544" level="INFO">Element '//*[@id="usage"]/div/div/div/div[1]/div[1]/div/div/div[2]/div/button[5]' does not contain text 'Set Variable '.</msg>
+<status status="PASS" starttime="20231003 03:29:25.529" endtime="20231003 03:29:25.545"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.463" endtime="20231003 03:29:25.545"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.181" endtime="20231003 03:29:25.546"/>
+</test>
+<test id="s1-t3" name="Test Case 3: Test usage selection-controls" line="82">
+<kw name="Click Element and Verify">
+<arg>${ELEMENT_SELECTION_DISMISSIBLE}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.548" endtime="20231003 03:29:25.563"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<var>${is_enabled}</var>
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<msg timestamp="20231003 03:29:25.587" level="INFO">${is_enabled} = None</msg>
+<status status="PASS" starttime="20231003 03:29:25.564" endtime="20231003 03:29:25.587"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 03:29:25.587" level="INFO">Clicking element 'css:.v-input--selection-controls__ripple'.</msg>
+<status status="PASS" starttime="20231003 03:29:25.587" endtime="20231003 03:29:25.637"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.548" endtime="20231003 03:29:25.637"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.547" endtime="20231003 03:29:25.638"/>
+</test>
+<test id="s1-t4" name="Test Case 4: Test v-slider of Elevation" line="86">
+<kw name="Check Element">
+<arg>${ELEMENT_SLIDER}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.640" endtime="20231003 03:29:25.678"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.639" endtime="20231003 03:29:25.679"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.639" endtime="20231003 03:29:25.681"/>
+</test>
+<test id="s1-t5" name="Test Case 5: Test v-select of Border" line="89">
+<kw name="Check Element">
+<arg>${ELEMENT_INPUT_BORDER}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.685" endtime="20231003 03:29:25.715"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.684" endtime="20231003 03:29:25.715"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.683" endtime="20231003 03:29:25.716"/>
+</test>
+<test id="s1-t6" name="Test Case 6: Test v-select of Color" line="92">
+<kw name="Check Element">
+<arg>${ELEMENT_INPUT_COLOR}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.718" endtime="20231003 03:29:25.745"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.718" endtime="20231003 03:29:25.745"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.717" endtime="20231003 03:29:25.745"/>
+</test>
+<test id="s1-t7" name="Test Case 7: Test v-select of Icon" line="95">
+<kw name="Check Element">
+<arg>${ELEMENT_INPUT_ICON}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.750" endtime="20231003 03:29:25.783"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.750" endtime="20231003 03:29:25.783"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.749" endtime="20231003 03:29:25.784"/>
+</test>
+<test id="s1-t8" name="Test Case 8: Test v-select of Type" line="98">
+<kw name="Check Element">
+<arg>${ELEMENT_INPUT_TYPE}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 03:29:25.786" endtime="20231003 03:29:25.809"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.785" endtime="20231003 03:29:25.809"/>
+</kw>
+<status status="PASS" starttime="20231003 03:29:25.785" endtime="20231003 03:29:25.809"/>
+</test>
+<status status="PASS" starttime="20231003 03:29:19.770" endtime="20231003 03:29:25.810"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Test-Vuetify-Alerts">Test-Vuetify-Alerts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
