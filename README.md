@@ -29,3 +29,8 @@
     ```
     # robot test-vuetify-alerts.robot
     ```
+
+
+ </br></br>
+
+<img src="./img/robot-framework-2023-10-03 031938.png" width="500" hight="400"/>
